@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo-fatec {
+  width: 120px;
+  height: auto;
+}
+
+h1 {
+  font-size: 30px;
+  color: #a30000;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 50px;
+  flex-wrap: wrap;
+}
+
+.filtro {
+  background: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mapa {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 15px;
+}
+
+.sala {
+  background: #e6e6e6;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  outline: none;
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+}
+
+.sala:hover {
+  background: #d4d4d4;
+}
+
+.sala.selecionada {
+  border: 2px solid #a30000;
+  color: #a30000;
+}
+
+.acoes {
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.acoes button {
+  background: #a30000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.itinerario {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+}
+
+.itinerario h3 {
+  margin-bottom: 10px;
+  color: #a30000;
+}
+
+.dia {
+  margin-bottom: 15px;
+}
+
+.dia strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.dia p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filtros {
+    margin: 20px;
+    justify-content: center;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: none;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.dropdown-menu.visivel {
+  display: block;
+}
+
+.opcao {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.opcao:hover {
+  background-color: #eee;
+}
+
+#btn-procurar {
+  background-color: #a30000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#btn-procurar:hover {
+  background-color: #870000;
+}

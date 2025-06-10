@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Horários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sistema de Horários</h1>
+    <img src="https://fatecfranca.edu.br/images/logo.png" alt="Logo Fatec" class="logo-fatec">
+  </header>
+
+  <div class="filtros">
+    <div class="dropdown">
+      <button class="filtro">Curso ▾</button>
+      <div class="dropdown-menu">
+        <div class="opcao" data-tipo="curso">Meio Ambiente e Recursos Hídricos</div>
+        <div class="opcao" data-tipo="curso">Geoprocessamento</div>
+        <div class="opcao" data-tipo="curso">Desenvolvimento de Software Multiplataforma</div>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <button class="filtro">Turno ▾</button>
+      <div class="dropdown-menu">
+        <div class="opcao" data-tipo="turno">Diurno</div>
+        <div class="opcao" data-tipo="turno">Noturno</div>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <button class="filtro">Semestre ▾</button>
+      <div class="dropdown-menu">
+        <div class="opcao" data-tipo="semestre">1º Semestre</div>
+        <div class="opcao" data-tipo="semestre">2º Semestre</div>
+        <div class="opcao" data-tipo="semestre">3º Semestre</div>
+        <div class="opcao" data-tipo="semestre">4º Semestre</div>
+        <div class="opcao" data-tipo="semestre">5º Semestre</div>
+        <div class="opcao" data-tipo="semestre">6º Semestre</div>
+      </div>
+    </div>
+  
+    <button class="filtro" id="btn-procurar">Buscar </button> 
+  </div>
+  
+
+  <main class="conteudo">
+<div class="mapa">
+  <button class="sala">SALA DE ÁUDIO E VÍDEO 201</button>
+  <button class="sala">SALA DE AULA 202</button>
+  <button class="sala">LABORATÓRIO UNIVESP</button>
+  <button class="sala">SALA DE AULA 203</button>
+  <button class="sala">LABORATÓRIO INFORMÁTICA 204</button>
+  <button class="sala">SALA DE AULA 205</button>
+  <button class="sala selecionada">LABORATÓRIO INFORMÁTICA 207</button>
+  <button class="sala">LABORATÓRIO BIOLOGIA 208</button>
+  <button class="sala">LABORATÓRIO INFORMÁTICA 209</button>
+  <button class="sala">SALA DE AULA 210</button>
+  <div class="acoes">
+    <button>EXPORTAR RELATÓRIOS</button>
+    <button>MAPA DE AMBIENTE</button>
+    <button>HORÁRIOS</button>
+  </div>
+</div>
+
+
+    <div class="itinerario">
+      <h3>ITINERÁRIO</h3>
+      <div class="dia">
+        <strong>SEGUNDA</strong>
+        <p>Eng. de Software – 18:45 - 22:15</p>
+        <p>SO e Redes – 22:15 - 23:05</p>
+      </div>
+      <div class="dia">
+        <strong>TERÇA</strong>
+        <p>Modelagem BD – 18:45 - 21:15</p>
+        <p>Design Digital – 21:25 - 23:05</p>
+      </div>
+      <div class="dia">
+        <strong>QUARTA</strong>
+        <p>Algoritmo – 18:45 - 22:15</p>
+        <p>SO e Redes – 22:15 - 23:05</p>
+      </div>
+      <div class="dia">
+        <strong>SEXTA</strong>
+        <p>Desenvolvimento Web – 18:45 - 22:15</p>
+        <p>Modelagem BD – 22:15 - 23:05</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
