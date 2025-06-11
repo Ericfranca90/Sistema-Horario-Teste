@@ -1,17 +1,9 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('expandida');
-}
-
-function mostrarSecao(secao) {
-    const conteudo = document.getElementById("conteudo-dinamico");
-    const profile = document.getElementById("profile-section");
-}
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     const button = dropdown.querySelector('.filtro');
     const menu = dropdown.querySelector('.dropdown-menu');
   
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
       menu.classList.toggle('visivel');
     });
   
@@ -24,16 +16,12 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     });
   });
   
-  // Clique fora fecha o menu
-  window.addEventListener('click', function(e) {
+  window.addEventListener('click', function () {
     document.querySelectorAll('.dropdown-menu').forEach(menu => {
-      if (!menu.parentElement.contains(e.target)) {
-        menu.classList.remove('visivel');
-      }
+      menu.classList.remove('visivel');
     });
   });
   
-  // Ação do botão Procurar
   document.getElementById('btn-procurar').addEventListener('click', () => {
     const curso = document.querySelector('[data-tipo="curso"]')?.closest('.dropdown')?.querySelector('.filtro')?.dataset.valor;
     const turno = document.querySelector('[data-tipo="turno"]')?.closest('.dropdown')?.querySelector('.filtro')?.dataset.valor;
@@ -43,7 +31,7 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
       console.log("Curso:", curso);
       console.log("Turno:", turno);
       console.log("Semestre:", semestre);
-      // Aqui você fará a chamada ao seu banco de dados futuramente
+      // Aqui você pode imprimir dados do banco no itinerário futuramente
     } else {
       alert("Selecione todas as opções antes de procurar.");
     }
